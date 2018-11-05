@@ -1,6 +1,7 @@
-export const createProject = (project) => {
-  return (dispatch, getState, {getFirestore}) => {
+export const createProject = project => {
+  return (dispatch, getState, { getFirestore, getFirebase}) => {
     const firestore = getFirestore()
+    const profile = 
 
     firestore.collection('projects').add({
       ...project,
